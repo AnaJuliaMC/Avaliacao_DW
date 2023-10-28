@@ -1,34 +1,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap" );
 
 .container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100vw;
-    height: 100vh;
+    width:100vw;
+    height:100vh;
+    display: grid;
+    grid-template-columns: 25% auto;
+    grid-template-areas: 
+        "a1 a2";
+    font-family: 'Poppins', sans-serif;
+    
 }
 
 .side{
+    grid-area: a1;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     background-color: white;
     height:100vh;
-    min-width: 480px;
+    width:300px;
+    
 }
 
-img{
+input{
+    background-color: #C2C2C2;
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    border: 0px;
+}
+
+.img1{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
+    width: 300px;
 }
 
 .main{
-    display: flex; 
-    justify-content: center;
+    grid-area: a2;
+    display: flex;
     align-items: center;
-    background-color: #C2C2C2;
+    justify-content: center;
+    background-color: #555555;
 }
 
 p{
@@ -42,16 +57,32 @@ button{
 }
 
 .div_log_reg{
+    width: 300px;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
 
 }
 
+.forgot{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    align-content: flex-end;
+    width: 300px;
+}
+
 .log_reg{
-    font-family: 'Poppins', sans-serif;
     text-decoration: none;
+}
+
+.create{
+    font-family: 'Poppins', 'San Serif';
+    background-color: #FD7401;
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    border: 0px;
 
 }
 
