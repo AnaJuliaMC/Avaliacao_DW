@@ -11,7 +11,7 @@
     
 }
 
-.side{
+aside{
     grid-area: a1;
     display: flex;
     flex-direction: column;
@@ -47,14 +47,18 @@ p{
     color: #555555;
 }
 
-button{
+.botaozinho{
     background-color: #FD7401;
-    color: white;
-    border: #FD7401;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
 }
 
 .div_log_reg{
-    grid-area: a1;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
@@ -72,7 +76,6 @@ h3{
     align-content: flex-end;
     align-items: flex-end;
     justify-content: flex-end;
-    width: 300px;
 }
 
 .log_reg{
@@ -80,6 +83,7 @@ h3{
 }
 
 .login{
+    color: white;
     font-family: 'Poppins', 'San Serif';
     background-color: #FD7401;
     width: 300px;

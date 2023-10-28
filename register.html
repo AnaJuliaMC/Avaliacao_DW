@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <side class="side">
+        <aside>
             <div class="div_log_reg">
                 <a href="./login.html" style="color: #1E2772;" class="log_reg"> Login</a>
                 <a href="./register.html" style="color: #FD7401;" class="log_reg">Register</a>
@@ -27,26 +27,58 @@
 
             <form action="">
                 <p>Full name</p>
-                <input type="text" name="" id="" placeholder="Full name">
+                <input type="text" name="" id="nome" placeholder="Full name">
 
                 <p>Email</p>
-                <input type="email" placeholder="E-mail">
+                <input type="email" id="email" placeholder="E-mail">
 
                 <p>Password</p>
-                <input type="password" placeholder="Password"> <br> <br>
+                <input type="password" id="senha" placeholder="Password"> <br> <br>
 
                 <div class="forgot"><a href=""> Forgot password?</a></div> <br>
                 <br>
             
-                <button class="create">Create account</button>
+                <button onclick="CriarConta()" id="create" class="create">Create account</button>
 
             </form>            
 
-        </side>
+        </aside>
 
         <main>
-            <img src="./login-illustrator.jpg" alt="">
+            <img src="./login-illustrator.png" alt="">
         </main>
     </div>
+    <script>
+        function CriarConta() {
+            let Nome = document.getElementById("nome").value
+            let Email = document.getElementById("email").value
+            let Senha = document.getElementById("senha").value
+
+            if (Nome===""|| Email===""|| Senha===""){
+                alert("Todos os campos devem ser preenchidos")
+                return false;
+            }
+            
+            else if (Senha.length < 8){
+                alert("A senha deve ter um tamanho mínimo de 8 caracteres")
+                return false;
+            }
+
+            else {
+                alert("Cadastro realizado");
+                Nome.innerHTML;
+                Email.innerHTML;
+                Senha.innerHTML;
+                limpa()
+
+            }
+        }
+        function limpa(){
+            let Nome = document.getElementById('nome').value = "";
+            let Email = document.getElementById('email').value = "";
+            let Senha = document.getElementById('senha').value = "";
+
+        }
+    </script>
 </body>
 </html>

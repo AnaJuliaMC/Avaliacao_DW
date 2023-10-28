@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <side class="side">
+        <aside>
             <div class="div_log_reg">
                 <a href="./login.html" style="color: #1E2772;" class="log_reg"> Login</a>
                 <a href="./register.html" style="color: #FD7401;" class="log_reg">Register</a>
@@ -28,23 +28,67 @@
             <form action="">
 
                 <p>Email Adress</p>
-                <input type="email" placeholder="E-mail"> <button><span><img src="./email.zip" alt=""></span></button>
-
+                <input type="email" id="email" placeholder="E-mail"> <div class = "botaozinho"><img src = "./Frame.png" alt = ""></div>
+                
                 <p>Password</p>
-                <input type="password" placeholder="Password"> <br> <br>
+                <input type="password" id="senha" placeholder="Password"> <div class = "botaozinho"><img src = "./Frame (1).png" alt = ""> </div>
+                
+                
+                <br>
 
-                <div class="forgot"><a href=""> Forgot password?</a></div> <br>
+                <div class="forgot"><a href=""> Forgot password?</a></div>
+
+                <br>
                 <br>
             
-                <button class="login">Login</button>
+                <button onclick="Logar()" id="logar" class="login">Login</button>
 
             </form>            
 
-        </side>
+            </aside>
 
         <main>
-            <img src="./login-illustrator.jpg" alt="">
+
+            <img src="./login-illustrator.png" alt="">
+
         </main>
     </div>
+    <script>
+        function Logar() {
+            let Email = document.getElementById("email").value
+            let Senha = document.getElementById("senha").value
+
+            if (Email===""|| Senha===""){
+                alert("Todos os campos devem ser preenchidos")
+                return false;
+            }
+
+            else if(Email != "admin@email.com.br"){
+                alert("Email incorreto")
+                LimpaEmail()
+                return false;
+
+            }
+
+            else if ( Senha !="#dw1UTFPR#"){
+                alert("Senha incorreta")
+                LimpaSenha()
+                return false;
+            }
+
+            else{
+                alert("Usuario autenticado")
+            }
+        }
+
+        function LimpaEmail(){
+            let Email = document.getElementById('email').value = "";
+        }
+
+        function LimpaSenha(){
+            let Senha = document.getElementById('senha').value = "";
+        }
+
+    </script>
 </body>
 </html>
