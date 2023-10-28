@@ -4,9 +4,9 @@
     width:100vw;
     height:100vh;
     display: grid;
-    grid-template-columns: 25% auto;
+    grid-template-columns: 23% 77%;
     grid-template-areas: 
-        "a1 a2";
+    "a1 a2";
     font-family: 'Poppins', sans-serif;
     
 }
@@ -16,9 +16,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    background-color: white;
-    height:100vh;
-    width:300px;
+    background-color:white;
     
 }
 
@@ -31,6 +29,7 @@ input{
 }
 
 .img1{
+    grid-area: a1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,12 +37,12 @@ input{
     width: 300px;
 }
 
-.main{
+main{
     grid-area: a2;
-    display: flex;
+    display: grid;
     align-items: center;
     justify-content: center;
-    background-color: #555555;
+    background-color: #C2C2C2;
 }
 
 p{
@@ -57,11 +56,17 @@ button{
 }
 
 .div_log_reg{
+    grid-area: a1;
     width: 300px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-content: space-between;
 
+}
+
+h3{
+    align-self: center;
 }
 
 .forgot{
