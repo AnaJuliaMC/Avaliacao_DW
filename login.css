@@ -4,7 +4,7 @@
     width:100vw;
     height:100vh;
     display: grid;
-    grid-template-columns: 23% 77%;
+    grid-template-columns: 25% 75%;
     grid-template-areas: 
     "a1 a2";
     font-family: 'Poppins', sans-serif;
@@ -20,12 +20,26 @@ aside{
     
 }
 
+.log_reg{
+    text-decoration: none;
+}
+
+.div_log_reg{
+    display:flex;
+    grid-area: a1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+
+}
+
 input{
     background-color: #C2C2C2;
     width: 300px;
     height: 40px;
     border-radius: 5px;
     border: 0px;
+   
 }
 
 .img1{
@@ -47,6 +61,14 @@ p{
     color: #555555;
 }
 
+.email{
+    display: flex;
+}
+
+.senha{
+    display: flex;
+}
+
 .botaozinho{
     background-color: #FD7401;
     border-radius: 5px;
@@ -55,15 +77,9 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
-    align-self: flex-end;
-}
-
-.div_log_reg{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: space-between;
-
+    margin-right: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 h3{
@@ -78,18 +94,17 @@ h3{
     justify-content: flex-end;
 }
 
-.log_reg{
-    text-decoration: none;
-}
-
 .login{
     color: white;
     font-family: 'Poppins', 'San Serif';
     background-color: #FD7401;
     width: 300px;
-    height: 40px;
+    height: 50px;
     border-radius: 5px;
     border: 0px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-left: 30px;
 
 }
 
